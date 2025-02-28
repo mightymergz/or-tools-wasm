@@ -556,4 +556,4 @@ function main() {
   esac
 }
 
-main "${1:-all}"
+main "${1:-all}" ${@:2}
