@@ -378,7 +378,7 @@ QEMU_ARGS+=( -E LD_PRELOAD="${SYSROOT_DIR}/usr/lib/libstdc++.so.6:${SYSROOT_DIR}
 }
 
 function expand_wasm_config() {
-  local -r EMSDK_VERSION=2.0.14
+  local -r EMSDK_VERSION=3.1.58
   local -r EMSDK_URL=https://github.com/emscripten-core/emsdk/archive/${EMSDK_VERSION}.tar.gz 
   local -r EMSDK_RELATIVE_DIR="emsdk-${EMSDK_VERSION}"
   local -r EMSDK="${ARCHIVE_DIR}/${EMSDK_RELATIVE_DIR}"

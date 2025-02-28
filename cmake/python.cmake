@@ -41,7 +41,7 @@ endif()
 list(APPEND CMAKE_SWIG_FLAGS "-DOR_DLL=")
 
 # Find Python 3
-find_package(Python3 REQUIRED COMPONENTS Interpreter Development.Module)
+find_package(Python3 REQUIRED COMPONENTS Interpreter Development.Module Development.Embed)
 list(APPEND CMAKE_SWIG_FLAGS "-py3" "-DPY3")
 
 # Find if the python module is available,
