@@ -399,7 +399,7 @@ function expand_wasm_config() {
 function build() {
   cd "${PROJECT_DIR}" || exit 2
   set -x
-  clean_build
+  #clean_build
   cmake -S. -B"${BUILD_DIR}" "${CMAKE_DEFAULT_ARGS[@]}" "${CMAKE_ADDITIONAL_ARGS[@]}"
   cmake --build "${BUILD_DIR}" --target all -j8 -v
   set +x
@@ -508,7 +508,7 @@ function main() {
       >&2 echo "Unknown PROJECT '${PROJECT}'..."
       exit 1 ;;
   esac
-  declare -a CMAKE_ADDITIONAL_ARGS=("${@:2}")
+  declare -a CMAKE_ADDITIONAL_ARGS=(${@:2})
 
   declare -a QEMU_ARGS=()
   # ref: https://go.dev/doc/install/source#environment
