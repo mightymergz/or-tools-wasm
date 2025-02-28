@@ -508,7 +508,7 @@ function main() {
       >&2 echo "Unknown PROJECT '${PROJECT}'..."
       exit 1 ;;
   esac
-  declare -a CMAKE_ADDITIONAL_ARGS=()
+  declare -a CMAKE_ADDITIONAL_ARGS=("${@:2}")
 
   declare -a QEMU_ARGS=()
   # ref: https://go.dev/doc/install/source#environment
