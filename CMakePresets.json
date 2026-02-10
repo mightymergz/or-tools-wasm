@@ -1,0 +1,30 @@
+{
+    "version": 8,
+    "configurePresets": [
+        {
+            "name": "wasm32",
+            "displayName": "wasm32",
+            "description": "Sets toolchain",
+            "binaryDir": "build_cross/wasm32",
+            "debug": {
+                "output": true,
+                "find": true
+            },
+            "trace": {
+                "mode": "expand",
+                "source":["CMakeFiles.txt"]
+            },
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "/home/mergz/or-tools-wasm/pyodide/emsdk/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake",
+                "BUILD_PYTHON": "ON",
+                "USE_COINOR": "OFF",
+                "USE_SCIP": "OFF",
+                "BUILD_SAMPLES": "OFF",
+                "BUILD_EXAMPLES": "OFF",
+                "BUILD_SHARED_LIBS": "OFF",
+                "Python_INCLUDE_DIR": "/home/mergz/or-tools-wasm/pyodide/cpython/installs/python-3.12.7/include/python3.12",
+                "Python_LIBRARY": "/home/mergz/or-tools-wasm/pyodide/cpython/installs/python-3.12.7/lib/python3.12/libpython3.12.a"
+            }
+        }
+    ]
+}
